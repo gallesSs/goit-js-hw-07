@@ -1,5 +1,5 @@
 const inputEl = document.querySelector("#name-input");
-inputEl.addEventListener("blur", handleBlur);
+inputEl.addEventListener("input", handleBlur);
 const greeting = document.querySelector("#name-output");
 
 function handleBlur(event) {
@@ -7,8 +7,8 @@ function handleBlur(event) {
     const nameCleared = name.trim();
     console.log(nameCleared);
     if (nameCleared === "") {
-        greeting.innerText = "Anonymous"; // Assigning "Anonymous" to greeting.innerText
+        greeting.textContent = "Anonymous"; // Assigning "Anonymous" to greeting.innerText
     } else {
-        greeting.innerText = nameCleared; // Assigning nameCleared to greeting.innerText
+        greeting.textContent = nameCleared; // Assigning nameCleared to greeting.innerText
     }
 }
